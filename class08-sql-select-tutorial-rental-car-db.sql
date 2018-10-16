@@ -14,7 +14,7 @@ car.id = servicing.carId ORDER BY servicing.serviceDate;
 /* When we are querying across two tables like this by selecting tuples from
 each that have matching not null values for two attributes, we are selecting
 from the cartesian product of the two sets of rows of the two tables. In the
-WHERE clause, we are filtering based in the quality of the referring and
+WHERE clause, we are filtering based in the equality of the referring and
 referred attributes of the foreign key relationship between the tables; the
 condition that we are using to select the rows for the result-set (in this case
 the condition that the two id attributes are equal) is known as the "join
@@ -81,7 +81,7 @@ SELECT * FROM t1 INNER JOIN t2 ON t1.id = t2.id;
 
 SELECT * FROM t1 JOIN t2 USING (id);
 
-/* With the NATURAL , do you see how there is only one "id" column in the
+/* With the NATURAL JOIN, do you see how there is only one "id" column in the
 result-set?  DO NOT TRY THIS IF YOU HAVE TWO DIFFERENT COLUMN NAMES, it won't
 work. */
 
