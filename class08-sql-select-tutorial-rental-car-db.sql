@@ -43,7 +43,10 @@ SELECT * from car INNER JOIN servicing ON car.id = servicing.carId;
 /* Let's compare the two queries. Are they the same? */
 
 /* But how do we *know* it's the same query, just because we got the same results? 
-   We can use the EXPLAIN EXTENDED SQL command. We'll start with the  */
+   We can use the EXPLAIN EXTENDED SQL command. */
+
+EXPLAIN EXTENDED SELECT * from car, servicing WHERE car.id = servicing.carId;
+EXPLAIN EXTENDED SELECT * from car INNER JOIN servicing ON car.id = servicing.carId;
 
 /* (show slide from Canvas) */
 
