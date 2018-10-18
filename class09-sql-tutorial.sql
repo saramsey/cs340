@@ -287,3 +287,7 @@ AND rentalCar.rentalId = rental.id AND car.id = rentalCar.carId GROUP BY
 customer.custName, car.model;
 
 SELECT * FROM RentalFrequencyReport;
+
+/* Is this view updatable? */
+SELECT TABLE_NAME, IS_UPDATABLE FROM INFORMATION_SCHEMA.VIEWS WHERE
+TABLE_SCHEMA='cs340';
